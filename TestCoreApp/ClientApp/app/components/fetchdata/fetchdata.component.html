@@ -1,0 +1,24 @@
+<h1>Products</h1>
+
+<p>This component demonstrates fetching sample AdventureWorksLT data from an <strong>Azure SQL server</strong>.</p>
+
+<p *ngIf="!products"><em>Loading...</em></p>
+
+<table class='table' *ngIf="products">
+    <thead>
+        <tr>
+            <th>ProductID</th>
+            <th>Name</th>
+            <th>Color</th>
+            <th>ListPrice</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products">
+            <td>{{ product.productId }}</td>
+            <td>{{ product.name }}</td>
+            <td>{{ product.color }}</td>
+            <td>{{ product.listPrice }}</td>
+        </tr>
+    </tbody>
+</table>
