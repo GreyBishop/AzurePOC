@@ -27,7 +27,7 @@ namespace TestCoreApp
             services.AddMvc();
 
             // will return settings while executing in Azure
-            var connection = Environment.GetEnvironmentVariable("azureSqlConn");
+            var connection = Environment.GetEnvironmentVariable("SQLAZURECONNSTR_azureSqlConn");
 
             //if (string.IsNullOrEmpty(connection))
             //    connection = @"Server=tcp:adw-poc.database.windows.net,1433;Initial Catalog=AdventureWorksPOC;Persist Security Info=False;User ID=AzureAdmin;Password=Admin1116;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
