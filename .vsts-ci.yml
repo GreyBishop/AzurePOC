@@ -33,3 +33,11 @@ steps:
     ArtifactName: drop
     ArtifactType: Container
   displayName: Publish the artifacts
+  
+- task: AzureRmWebAppDeployment@2
+  inputs:
+    ConnectedServiceName: $(System.TeamProject)
+    ResourceGroupName: $(System.TeamProject)
+    WebAppName: $(System.TeamProject)
+    Package: $(build.artifactstagingdirectory)/**/*.zip
+    TakeAppOfflineFlag: true
