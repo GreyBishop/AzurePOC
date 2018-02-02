@@ -36,8 +36,8 @@ steps:
   
 - task: AzureRmWebAppDeployment@2
   inputs:
-    ConnectedServiceName: {0}
-    ResourceGroupName: {0}
-    WebAppName: {0}
+    ConnectedServiceName: "{0}"
+    ResourceGroupName: "{0}"
+    WebAppName: "{0}"
     Package: $(build.artifactstagingdirectory)/**/*.zip
     TakeAppOfflineFlag: true
