@@ -34,10 +34,10 @@ steps:
     ArtifactType: Container
   displayName: Publish the artifacts
   
-- task: AzureRmWebAppDeployment@2
-  inputs:
-    ConnectedServiceName: "{0}"
-    ResourceGroupName: "{0}"
-    WebAppName: "{0}"
-    Package: $(build.artifactstagingdirectory)/**/*.zip
-    TakeAppOfflineFlag: true
+#- task: AzureRmWebAppDeployment@2
+#  inputs:
+#    ConnectedServiceName: "{0}"
+#    ResourceGroupName: "{0}"
+#    WebAppName: "{0}"
+#    Package: $(build.artifactstagingdirectory)/**/*.zip
+#    TakeAppOfflineFlag: true
