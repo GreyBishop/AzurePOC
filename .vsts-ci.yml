@@ -24,7 +24,7 @@ steps:
   inputs:
     command: publish
     arguments: --configuration release --output $(Build.ArtifactStagingDirectory)
-    zipAfterPublish: true
+    zipAfterPublish: false
   displayName: dotnet publish
 
 - task: publishBuildArtifacts@1
